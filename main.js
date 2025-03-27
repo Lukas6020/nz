@@ -249,3 +249,11 @@ for (let i = 0; i < STOPS.length; i++) {
     }
     document.querySelector("#pulldown select").appendChild(option);
 }
+
+// auf Änderungen beim Pulldown reagieren
+document.querySelector("#pulldown select").onchange = function(evt) {
+    let url = `https://${evt.target.value}.github.io/nz`;
+    //console.log(url);
+    //console.log(evt.target.value);
+    window.location = url;
+}
