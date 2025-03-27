@@ -3,7 +3,7 @@ Skript für die Neuseelandreise
 */
 
 // Karte initialisieren
-var map = L.map('map').setView([-38.14, 176.25], 13);
+let map = L.map('map').setView([-38.14, 176.25], 13);
 
 // Hintergrundkarte definieren
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -12,7 +12,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Marker zeichnen
-var marker = L.marker([-38.14, 176.25]).addTo(map);
+let marker = L.marker([-38.14, 176.25]).addTo(map);
 
 // Popup definieren und öffnen
 marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
