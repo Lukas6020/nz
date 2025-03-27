@@ -20,7 +20,7 @@ const STOPS = [
         lng: 172.6775,
         zoom: 13,
         title: "Cape Reinga",
-        nummer: 1,
+        nr: 1,
         user: "vintiyannick",
     },
     {
@@ -42,7 +42,7 @@ const STOPS = [
     {
         nr: 4,
         title: "Cormandel Peninsula",
-        usr: "Gregorysprenger2001",
+        user: "Gregorysprenger2001",
         lat: -37.882778,
         lng: 175.636667,
         zoom: 11,
@@ -230,16 +230,13 @@ for (let i = 0; i < STOPS.length; i++) {
         <li>Geographische Länge: ${STOPS[i].lat.toFixed(2)}°</li>
         <li>Geographische Breite: ${STOPS[i].lng.toFixed(2)}°</li>
     </ul>
-    `).openPopup();
-}
+    `);
 
-let course = {
-    title: "Webmapping",
-    semester: "25S",
-    stunden: 3,
-    typ: "VU"
-};
-console.log("title", course.title);
-console.log("semester", course.semester);
-console.log("stunden", course.stunden);
-console.log("typ", course.typ);
+
+    // auf eigene Etappe blicken und Popup öffnen
+    if (STOPS[i].user == "lukas6020") {
+        console.log(STOPS[i].user, "meine Etappe")
+        map.setView([STOPS[i].lat, STOPS[i].lng], STOPS[i].zoom);
+        marker.openPopup();
+    }
+}
