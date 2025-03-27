@@ -200,7 +200,12 @@ const STOPS = [
         zoom: 11
     },
 
-]
+];
+console.log(STOPS[0]);
+console.log(STOPS[0].title);
+for (let i=0; i<STOPS.length; i++) {
+    console.log(STOPS[i]);
+}
 
 // Karte initialisieren
 let map = L.map('map').setView([stop.lat, stop.lng], stop.zoom);
