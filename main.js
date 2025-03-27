@@ -21,9 +21,19 @@ let marker = L.marker([lat, lng]).addTo(map);
 // Popup definieren und öffnen
 marker.bindPopup(`
     <h2>Rotorua</h2>
-    
     <ul>
         <li>Geographische Länge: ${lat.toFixed(2)}</li>
         <li>Geograaphische Breite: ${lng.toFixed(2)}</li>
     </ul>
-     `).openPopup();
+`).openPopup();
+
+let course = {
+    title: "Webmapping",
+    semester: "25S",
+    stunden: 3,
+    typ: "VU"
+};
+console.log("title", course.title);
+console.log("semester", course.semester);
+console.log("stunden", course.stunden);
+console.log("typ", course.typ);
